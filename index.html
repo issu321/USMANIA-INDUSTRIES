@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Usmania Techs Pvt.Ltd</title>
+    <link rel="shortcut icon" href="images/R2.png" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0c0c0c;
+            color: #f3f5f7; /* Changed text color */
+        }
+        
+        .bg-image {
+            /* Add a slight overlay to darken the image */
+            background-image: url(R2.png);
+            /* Add a subtle blur effect to the background */
+            filter:hue-rotate(20px);
+            /* Add a slight scale effect to make the image slightly larger */
+            /* Add a transition for smooth effect changes */
+            /* Make sure the background covers the entire viewport */
+            background-size: cover;
+            /* Position the background */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        /* Add hover effect to remove the blur and scale on hover */
+        .bg-image {
+            /* Your existing background styles */
+            background-image: url('R2.png');
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            /* Add transition for smooth effect changes */
+            
+        }
+        
+        /* Add a pseudo-element to create the ripple effect */
+        .bg-image::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(38, 135, 190, 0.973);
+            border-radius: 100%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            animation: ripple 2.5s infinite;
+            opacity: 0;
+        }
+        
+        /* Define the ripple animation */
+        @keyframes ripple {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+        
+        
+        
+
+        .f2 {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .h11 {
+            color: white;
+            font-style: inherit;
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: inline-block;
+            animation: slideInDown 1s ease forwards;
+        }
+
+        @keyframes slideInDown {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .form {
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgb(0, 0, 0);
+            animation: fadeIn 3s ease forwards;
+        }
+        
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .inner {
+            text-align: left;
+        }
+
+        .p {
+            font-size: 20px;
+            margin-bottom: 20px;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #000000;
+            animation: slideInRight 1s ease forwards;
+        }
+        
+        input[type="text"]:focus, 
+        input[type="password"]:focus {
+            border-color: #000000;
+        }
+
+        @keyframes slideInRight {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        button.summit {
+            background-color: #083f74;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform transition */
+            animation: pulse 1s infinite; /* Added pulse animation */
+            animation-delay: 1s;
+        }
+
+        button.summit:hover {
+            background-color: #0a5494;
+            transform: scale(1.1); /* Scale up on hover */
+            animation: none; /* Disable pulse animation on hover */
+        }
+
+        .marquee {
+            animation: marquee 15s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .marquee h1 {
+            font-size: 20px;
+            margin: 0;
+            padding: 10px;
+        }
+
+        /* Added animation for link */
+        .p a {
+            color: #09f809; /* Changed link color */
+            text-decoration: none;
+            animation: fadeIn 2s ease forwards;
+        }
+
+        .horizontal-links {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center; /* Center align the list */
+        }
+        
+        .horizontal-links li {
+            display: inline;
+            margin-right: 10px; /* Adjust spacing between links */
+        }
+        
+        .horizontal-links li:last-child {
+            margin-right: 0; /* Remove margin from the last item */
+        }
+        
+        .horizontal-links li a {
+            text-decoration: none;
+            color: #000000; /* Set link color */
+            background-color: #ffffff;
+            padding: 5px 10px; /* Adjust padding for better spacing */
+            border: 1px solid #000000; /* Add border for better visibility */
+            border-radius: 7px; /* Add border radius for rounded corners */
+        }
+        
+        .horizontal-links li a:hover {
+            background-color: #000000; /* Change background color on hover */
+            color:rgb(0, 183, 255)
+        }
+        
+        
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-image"></div>
+    <div class="f2">
+        <div class="h11">
+            <h2><b><p>Login To Usmania Technologies</p></b></h2>
+        </div>
+    </div>
+    <div class="for">
+        <div class="form">
+            <div class="inner">
+                <div class="p">
+                    New Users <a href="mailto:jaafreeusman@gmail.com">Click Here </a>  To Get Password & User Name
+                </div>
+                <label for="username"><b>Username</b> : </label>
+                <input type="text" placeholder="Enter The Username" class="name" id="username"><br>
+                <label for="password"><b>Password</b> : </label>
+                <input type="password" placeholder="Enter Password" class="pass" id="password"><br>
+                <button onclick="login()" type="submit" class="summit">Login</button>
+            </div>
+        </div>
+    </div>
+        <marquee behavior="slow" direction="left"><h1><b>Note: The Username and Password are System Generated. Enter the ones given by the Admin.</b></h1></marquee>
+
+        
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if (username == "Welcome" && password == "wsxcfty9009") {
+                alert("Login Successful. Welcome To USMANIA INDUSTRIES");
+                window.location.href = "complemented.html";
+            } else {
+                alert(" Fatal Error,  Invalid  Username or Password");
+            }
+        }
+    </script>
+    <footer>
+        <ul class="horizontal-links">
+            <li><a href="https://github.com/security">Security</a></li>
+            <li><a href="https://github.com/privacy">Privacy</a></li>
+            <li><a href="https://github.com/site-policy">Site Policy</a></li>
+            <li><a href="https://github.com/about">About</a></li>
+            <li><a href="https://github.com/education">Education</a></li>
+            <li><a href="https://github.com/issu321">Developer</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
