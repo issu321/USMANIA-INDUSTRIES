@@ -2,7 +2,41 @@
 <html lang="en">
 
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>USMANIA ROBOTICS TECHS</title>
+	<style>
+	/* ✅ Ensure proper scrolling on mobile devices */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scroll for iOS */
+    scroll-behavior: smooth;
+}
+
+/* ✅ Optional: Avoid fixed containers blocking scroll */
+* {
+    box-sizing: border-box;
+}
+
+.container, .wrapper, main, section, div {
+    max-height: none;
+    overflow: visible;
+    position: relative;
+}
+
+/* ✅ Responsive viewport */
+@media screen and (max-width: 768px) {
+    html, body {
+        height: auto;
+    }
+}
+		</style>
+
 	<link rel="shortcut icon" href="images/R1.png" type="image/x-icon">
 	<center>
 		<h1>Usmania Robot Technologies</h1>
